@@ -1,7 +1,6 @@
-
 import React, { useState } from 'react';
 import FormularioJuego from './components/FormularioJuego';
-import './styles/theme.css';
+import BibliotecaJuegos from './components/BibliotecaJuegos';
 
 function App() {
   const [juegos, setJuegos] = useState([]);
@@ -12,17 +11,9 @@ function App() {
 
   return (
     <div>
-      <h1>Gestión de Juegos</h1>
+      <h1>Mi Biblioteca de Juegos</h1>
       <FormularioJuego onAgregarJuego={agregarJuego} />
-      <div className="lista-juegos">
-        {juegos.map((juego, index) => (
-          <div key={index} className="tarjeta-juego">
-            <h3>{juego.titulo}</h3>
-            <p>{juego.genero}</p>
-            {juego.imagen && <img src={juego.imagen} alt={juego.titulo} />}
-          </div>
-        ))}
-      </div>
+      <BibliotecaJuegos juegos={juegos} />
     </div>
   );
 }
