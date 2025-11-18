@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import '../styles/theme.css';
 
 function FormularioJuego({ onAgregarJuego }) {
   const [titulo, setTitulo] = useState('');
