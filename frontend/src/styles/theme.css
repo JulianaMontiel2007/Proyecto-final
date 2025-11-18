@@ -79,3 +79,53 @@ body {
   background-color: var(--color-text);
   color: var(--color-primary);
 }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a2d80;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #ff4545;
+}
+
+.formulario-juego {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 15px;
+  background: #001677;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.formulario-juego input, .formulario-juego button {
+  padding: 8px;
+  font-size: 14px;
+}
+
+.lista-juegos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.tarjeta-juego {
+  background: var(--color-primary);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 150px;
+  text-align: center;
+}
+
+.tarjeta-juego img {
+  max-width: 100%;
+  border-radius: 4px;
+}
