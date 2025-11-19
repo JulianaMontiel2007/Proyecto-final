@@ -1,8 +1,8 @@
 :root {
-  --color-bg: #101C29;       
-  --color-primary: #2868C6;  
-  --color-accent: #CBA2EA;   
-  --color-text: #ffffff;     
+  --color-bg: #101C29;
+  --color-primary: #2868C6;
+  --color-accent: #CBA2EA;
+  --color-text: #ffffff;
 }
 
 body {
@@ -10,11 +10,16 @@ body {
   color: var(--color-text);
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  padding: 20px;
+  text-align: center; 
 }
+
+h1 {
+  color: var(--color-primary); 
+  margin-bottom: 20px;
+}
+
 .biblioteca-container {
-  background-color: var(--color-bg);
-  color: var(--color-text);
   padding: 20px;
   border-radius: 8px;
 }
@@ -22,7 +27,6 @@ body {
 .titulo {
   color: var(--color-primary);
   font-size: 2rem;
-  margin-bottom: 10px;
 }
 
 .descripcion {
@@ -30,28 +34,26 @@ body {
   font-size: 1.2rem;
 }
 
-
 .tarjeta-juego {
   background-color: var(--color-primary);
   color: var(--color-text);
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 8px;
   text-align: center;
-  width: 220px;
+  width: 180px;
   margin: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .tarjeta-juego:hover {
   transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
 
-.imagen-juego {
+.tarjeta-juego img {
   width: 100%;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
 .titulo-juego {
@@ -73,22 +75,12 @@ body {
   cursor: pointer;
   border-radius: 4px;
   font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .btn-detalles:hover {
   background-color: var(--color-text);
   color: var(--color-primary);
-}
-body {
-  font-family: Arial, sans-serif;
-  background-color: #1a2d80;
-  margin: 0;
-  padding: 20px;
-}
-
-h1 {
-  text-align: center;
-  color: #ff4545;
 }
 
 .formulario-juego {
@@ -98,14 +90,28 @@ h1 {
   max-width: 300px;
   margin: 20px auto;
   padding: 15px;
-  background: #001677;
+  background: var(--color-bg);
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.formulario-juego input, .formulario-juego button {
+.formulario-juego input,
+.formulario-juego button {
   padding: 8px;
   font-size: 14px;
+}
+
+.formulario-juego button {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.formulario-juego button:hover {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
 }
 
 .lista-juegos {
@@ -116,16 +122,14 @@ h1 {
   margin-top: 20px;
 }
 
-.tarjeta-juego {
-  background: var(--color-primary);
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  width: 150px;
-  text-align: center;
-}
 
-.tarjeta-juego img {
-  max-width: 100%;
-  border-radius: 4px;
+@media (max-width: 768px) {
+  .lista-juegos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tarjeta-juego {
+    width: 90%;
+  }
 }

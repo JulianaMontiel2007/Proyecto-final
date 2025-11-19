@@ -16,10 +16,9 @@ function FormularioJuego({ onAgregarJuego }) {
 
   return (
     <form className="formulario-juego" onSubmit={manejarSubmit}>
-      <h2>Agregar Juego</h2>
       <input
         type="text"
-        placeholder="Título"
+        placeholder="Título del juego"
         value={titulo}
         onChange={(e) => setTitulo(e.target.value)}
         required
@@ -42,4 +41,3 @@ function FormularioJuego({ onAgregarJuego }) {
   );
 }
 
-export default FormularioJuego;
